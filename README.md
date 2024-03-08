@@ -387,16 +387,33 @@ pico test.py
 
 ```
 import ollama
-response = ollama.chat(model='llama2', messages=[
-  {
-    'role': 'user',
-    'content': 'Who is Bowser',
-  },
-])
-print(response['message']['content'])
+
+stream = ollama.chat(
+    model='llama2',
+    messages=[{'role': 'user', 'content': 'Who is Bowser? Show me only 2-3 lines'}],
+    stream=True,
+)
+
+for chunk in stream:
+  print(chunk['message']['content'], end='', flush=True)
 ```
 
-10. Run your script!
+* Or you can get a response from Mario, adjust your code to the `mario` model!
+
+```
+import ollama
+
+stream = ollama.chat(
+    model='mario',
+    messages=[{'role': 'user', 'content': 'Who is Bowser? Show me only 2-3 lines'}],
+    stream=True,
+)
+
+for chunk in stream:
+  print(chunk['message']['content'], end='', flush=True)
+```
+
+11. Run your script!
 
 ```
 python3 test.py
