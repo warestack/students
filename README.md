@@ -60,27 +60,27 @@ On GCP, open port `8888` or allow access to all.
 
 * Click on `default`
 
-![1-network](/Users/steliossotiriadis/Dropbox/AA-Birkbeck/AA-Training/assets/1-network.png)
+![1-network](assets/1-network.png)
 
 * Acces the firewall
 
-![1-network](/Users/steliossotiriadis/Dropbox/AA-Birkbeck/AA-Training/assets/2-Firewalls.png)
+![1-network](assets/2-Firewalls.png)
 
 * Add a new rule.
 
-![1-network](/Users/steliossotiriadis/Dropbox/AA-Birkbeck/AA-Training/assets/3-Filrewall-rule.png)
+![1-network](assets/3-Filrewall-rule.png)
 
 * Create the rule and save it.
 
-![1-network](/Users/steliossotiriadis/Dropbox/AA-Birkbeck/AA-Training/assets/4-Create-rule.png)
+![1-network](assets/4-Create-rule.png)
 
-* Return back to your VM instances.
+* Return to your VM instances.
 
-![1-network](/Users/steliossotiriadis/Dropbox/AA-Birkbeck/AA-Training/students/assets/5-VM instances.png)
+![1-network](assets/5-VM-instances.png)
 
 * Open your web browser and type the following URL:
 
-![1-network](/Users/steliossotiriadis/Dropbox/AA-Birkbeck/AA-Training/students/assets/5-VM-instances.png)
+![1-network](assets/5-VM-instances.png)
 
 ```
 http://{your-ip}:8888/
