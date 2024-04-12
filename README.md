@@ -419,3 +419,34 @@ for chunk in stream:
 python3 test.py
 ```
 
+Optional material to setup a UI:
+
+Install Docker
+
+```apt  install docker
+apt install docker.io
+```
+
+Install the web-ui docker container.
+
+```
+docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main
+```
+
+Go to VM at port 3000
+
+```
+import ollama
+
+stream = ollama.chat(
+    model='llama2',
+    messages=[{'role': 'user', 'content': 'Why is the sky blue?'}],
+    stream=True,
+)
+
+for chunk in stream:
+  print(chunk['message']['content'], end='', flush=True)
+```
+
+
+
